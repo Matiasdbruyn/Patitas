@@ -78,3 +78,100 @@ if (login()) {
 } else {
   alert("Cuenta bloqueada");
 }
+
+let mensaje =
+  "estos son algunos alimentos, juguetes y collares que tenemos a la venta";
+
+console.log(mensaje.toUpperCase());
+
+function comida(marca, sabor, peso, estatura) {
+  this.marca = marca;
+  this.sabor = sabor;
+  this.peso = peso;
+  this.estatura = estatura;
+}
+
+const comida1 = new comida(
+  "Pro Plan",
+  "Carne de Pollo",
+  "15kg",
+  "Perro mediano y grande"
+);
+const comida2 = new comida(
+  "Pedigree",
+  "Carne y vegetales",
+  "21kg",
+  "Perro adulto"
+);
+const comida3 = new comida("Nutrique", "Pavo", "7,5kg", "Perro Adulto Joven");
+
+console.log(comida1);
+console.log(comida2);
+console.log(comida3);
+
+function jueguetes(tipo, color, estilo) {
+  this.tipo = tipo;
+  this.color = color;
+  this.estilo = estilo;
+}
+
+const juguetes1 = new jueguetes("Pelota", "Azul", "Simple");
+const juguetes2 = new jueguetes("Soga", "Rojo, Verde y Blanco", "Anti-estres");
+const juguetes3 = new jueguetes("Peluche", "Azul y Rojo", "Spiderman");
+
+console.log(juguetes1);
+console.log(juguetes2);
+console.log(juguetes3);
+
+function collares(marca, color, talle) {
+  this.marca = marca;
+  this.color = color;
+  this.talle = talle;
+}
+
+const collar1 = new collares("Zeus", "Azul", "S");
+const collar2 = new collares("Hund", "Blanco y Negro", "S");
+const collar3 = new collares("Hiking", "Camuflado", "M");
+
+console.log(collar1);
+console.log(collar2);
+console.log(collar3);
+
+let mensaje2 = "mas adelante tendremos:";
+
+console.log(mensaje2.toUpperCase());
+
+const productos = ["Huesos", "Colchones", "Pastillas", "Baño", "Estetica"];
+
+for (let i = 0; i < productos.length; i++) {
+  console.log(productos[i]);
+}
+
+let opinionCliente = prompt(
+  "Que otro producto/servicio queres que ofrescamos? Si no deseas agregar nada ingrese 0"
+);
+
+productos.push(opinionCliente);
+console.log(productos);
+
+const precios = [
+  { nombre: "Huesos", precio: "$1000" },
+  { nombre: "Colchones", precio: "$2500" },
+  { nombre: "Pastillas", precio: "$500" },
+  { nombre: "Baño", precio: "$1500" },
+  { nombre: "Estetica", precio: "$3000" },
+];
+
+let preciosBuscar = prompt(
+  "Elegi algunos de los proximos productos para consultar precio. Escribilo tal cual aparece con la mayuscula o la primera letra en mayuscula"
+);
+const precioEncontrado = precios.find(
+  (precio) => precio.nombre == preciosBuscar
+);
+console.log(precioEncontrado);
+
+const otroFiltro = precios.filter((precio) =>
+  precio.nombre.includes(preciosBuscar)
+);
+
+console.log(otroFiltro);

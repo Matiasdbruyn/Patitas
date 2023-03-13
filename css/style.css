@@ -6,11 +6,11 @@
 }
 .todojunto {
   background-image: url(../img/perrosFondo.png);
+  filter: brightness(0.9);
   background-position: center;
   background-repeat: no-repeat;
 }
 .header {
-  background-color: rgba(222, 184, 135, 0.356);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -20,7 +20,7 @@
 }
 .header div {
   text-decoration: overline;
-  color: rgb(99, 87, 65);
+  color: white;
 }
 .header ul {
   display: flex;
@@ -36,15 +36,15 @@
 .header ul li {
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  color: wheat;
-  padding-right: 20px;
+  color: white;
+  padding-right: 80px;
 }
 .sectionuno {
   height: 800px;
 }
 .sectionuno h1 {
   text-decoration: overline;
-  color: wheat;
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
   text-align: center;
